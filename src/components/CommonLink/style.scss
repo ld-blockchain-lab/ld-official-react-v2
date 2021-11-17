@@ -1,0 +1,20 @@
+.common-link-wechat {
+  &:hover {
+    .common-link-wechat-img {
+      opacity: 1;
+    }
+  }
+
+  &-img {
+    position: absolute;
+    padding: 24px;
+    background-color: #fff;
+    opacity: 0;
+    transition: all ease 0.15s;
+
+    img {
+      height: 120px;
+      width: 120px;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "trans": {
+    "header": {
+      "menu_lang": "EN"
+    },
+    "sider": {
+      "menu": {
+        "home": "Home",
+        "introduction": "Introduction",
+        "highlight": "Highlight",
+        "portfolio": "Portfolio",
+        "team": "Team"
+      }
+    },
+    "footer": {
+    }
+  }
+}

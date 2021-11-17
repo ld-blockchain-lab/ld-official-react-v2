@@ -1,0 +1,68 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 20px;
+  height: 80px;
+  text-align: center;
+  background-image: url(../../assets/img/bg.png);
+  background-size: 32px 32px;
+  background-attachment: fixed;
+  transition: all ease 0.2s;
+
+  img {
+    display: inline-block;
+    width: 60px;
+    transform: scale(0.8);
+    transition: all ease 0.2s;
+  }
+
+  &.top {
+    padding-top: 40px;
+    height: 130px;
+
+    img {
+      width: 60px;
+      transform: scale(1);
+    }
+  }
+}
+
+nav {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  width: 500px;
+  height: 100vh;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+
+  .nav-menu {
+    &>div {
+      margin-bottom: 44px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      display: inline-block;
+      cursor: pointer;
+      font-size: 16px;
+      text-transform: uppercase;
+      transform-origin: left center;
+      transition: all ease 0.2s;
+
+      &.active {
+        transform: scale(1.25);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  @import './style.m.scss';
+}

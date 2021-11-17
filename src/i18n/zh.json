@@ -1,0 +1,55 @@
+{
+  "trans": {
+    "header": {
+      "menu_1": "白皮书",
+      "menu_lang": "CN"
+    },
+    "home_main": {
+      "desc": "An NFT War Game Designed Around Gamefi Protocol"
+    },
+    "home_overview": {
+      "desc_1": "Kindom X is a strategy war game on blockchain. Anyone can earn tokens from the game.",
+      "desc_2": "Players can battle, collect, raise and build their kingdom in the game. All the ecosystem is designed around gamefi protocol."
+    },
+    "home_nft": {
+      "desc_1": "NFT sales are using a pricing algorithm protocol.",
+      "desc_2": "Players can participate in PVP battles after getting an NFT.",
+      "desc_3": "During the battle, if you lose, there is a chance that your NFT will be burned.",
+      "desc_4": "The protocol will buy back your burned NFT.",
+      "desc_5": "The repurchase value is determined by the protocol."
+    },
+    "home_eco": {
+      "desc_1": "KING Token (KT):",
+      "desc_2": "It is the core token of KingdomX is used to value capture and game governance",
+      "desc_3": "KNIGHT Token (KNT):",
+      "desc_4": "It is the function token in game, which is used to reward players and consumption in game"
+    },
+    "home_protocol": {
+      "name": "KingsLanding protocol is for generating and burning NFTs",
+      "desc_1": "It has the following features:",
+      "desc_2": "While generating NFT, this protocol will get a certain amount of token as insurance.",
+      "desc_3": "While burning NFT, this protocol will return a certain amount of token to the player.",
+      "desc_4": "The specific amount will be calculated based on the algorithm of the protocol."
+    },
+    "home_roadmap": {
+      "title1": "STEP 1",
+      "desc1": "Official Website Launch\nBuilding Community\nKT in Uniswap",
+      "title2": "STEP 2",
+      "desc2": "Staking Gameplay\nNFT Presale\nHeroes Battle Game",
+      "title3": "STEP 3",
+      "desc3": "Lands Presale\nHero Generation system\nKingsLanding Protocol",
+      "title4": "STEP 4",
+      "desc4": "Avatar System\nLands Game\nSidechain project"
+    },
+    "footer": {
+      "twitter": "Twitter",
+      "twitter_link": "https://twitter.com/KingdomXGame",
+      "telegram_ann": "Telegram ANN",
+      "telegram_ann_link": "https://t.me/KingdomXAnn",
+      "telegram_community": "Telegram community chat",
+      "telegram_community_link": "https://t.me/KingdomXGame",
+      "discord": "Discord",
+      "discord_link": "https://discord.gg/eHxJVRVuxJ"
+    }
+  }
+}

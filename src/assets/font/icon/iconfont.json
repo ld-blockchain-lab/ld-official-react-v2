@@ -1,0 +1,30 @@
+{
+  "id": "2879373",
+  "name": "kingdomx",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1445417",
+      "name": "telegram",
+      "font_class": "telegram",
+      "unicode": "e8db",
+      "unicode_decimal": 59611
+    },
+    {
+      "icon_id": "4936985",
+      "name": "twitter",
+      "font_class": "twitter",
+      "unicode": "e882",
+      "unicode_decimal": 59522
+    },
+    {
+      "icon_id": "10784849",
+      "name": "bxl-discord",
+      "font_class": "bxl-discord",
+      "unicode": "e6e5",
+      "unicode_decimal": 59109
+    }
+  ]
+}
