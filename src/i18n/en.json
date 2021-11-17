@@ -6,10 +6,31 @@
     "sider": {
       "menu": {
         "home": "Home",
-        "introduction": "Introduction",
-        "highlight": "Highlight",
+        "glance": "Glance",
         "portfolio": "Portfolio",
-        "team": "Team"
+        "reports": "Reports",
+        "team": "Contact us"
+      },
+      "links": {
+        "twitter": "https://twitter.com/ld_capital",
+        "medium": "https://ld-capital.medium.com/",
+        "linkedin": "https://www.linkedin.com/company/ld-capital/about/"
+      }
+    },
+    "home": {
+      "story": {
+        "title": "Our Story",
+        "desc_1": "A leading crypto fund in investment and trading in primary and secondary markets, whose sub-funds include dedicated eco fund, FoF and hedge fund.",
+        "desc_2": "Owing to industrial resource advantages and professional investment research team, LD Capital has successively discovered and invested more than 400 companies since 2016. LD Capital overall achieved more than 100 times return with peak self-owned assets of nearly 1 billion US dollars."
+      },
+      "vision": {
+        "title": "Vision",
+        "desc_1": "Be prosperous for more than 88 years, invest and incubate more than 500 killer projects, and to become a global leading investor with over US$100 billion AUM.",
+        "desc_2": "We seek to create positive impact and sustainable value around the globe by offering life-cycle solutions via diverse strategies for a range of market opportunities and competent infrastructure support."
+      },
+      "cultur": {
+        "title": "Cultur",
+        "desc": "Client First, Play as a team, exercise prudence and integrity, uphold openness and transparency."
       }
     },
     "footer": {

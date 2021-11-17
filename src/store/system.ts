@@ -3,9 +3,9 @@ import { createContainer } from 'unstated-next'
 
 export enum HomeActiveMenu {
   home,
-  introduction,
-  highlight,
+  glance,
   portfolio,
+  reports,
   team,
 }
 

@@ -4,6 +4,10 @@
   align-items: center;
   justify-content: center;
 }
+#glance {
+  padding-top: 150px;
+  padding-bottom: 400px;
+}
 
 @media screen and (max-width: 600px) {
   @import './style.m.scss';

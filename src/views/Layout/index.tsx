@@ -4,9 +4,12 @@ import classname from 'classnames'
 import $ from 'jquery'
 import System, { HomeActiveMenu } from '../../store/system'
 import logoImg from '../../assets/img/logo.svg'
+import twImg from '../../assets/img/icon_twitter.svg'
+import mdImg from '../../assets/img/icon_medium.svg'
+import liImg from '../../assets/img/icon_linkin.svg'
 import './style.scss'
 
-const HEADER_TOP = 300
+const HEADER_TOP = 200
 
 const Header: React.FC = ({ children }) => {
   const [isTop, setTop] = useState(true)
@@ -62,21 +65,11 @@ const Sider: React.FC = () => {
         <div>
           <a
             className={classname({
-              active: activeHomeMenu === HomeActiveMenu.introduction,
+              active: activeHomeMenu === HomeActiveMenu.glance,
             })}
-            onClick={() => handleScroll('introduction')}
+            onClick={() => handleScroll('glance')}
           >
-            {t('sider.menu.introduction')}
-          </a>
-        </div>
-        <div>
-          <a
-            className={classname({
-              active: activeHomeMenu === HomeActiveMenu.highlight,
-            })}
-            onClick={() => handleScroll('highlight')}
-          >
-            {t('sider.menu.highlight')}
+            {t('sider.menu.glance')}
           </a>
         </div>
         <div>
@@ -92,6 +85,16 @@ const Sider: React.FC = () => {
         <div>
           <a
             className={classname({
+              active: activeHomeMenu === HomeActiveMenu.reports,
+            })}
+            onClick={() => handleScroll('reports')}
+          >
+            {t('sider.menu.reports')}
+          </a>
+        </div>
+        <div>
+          <a
+            className={classname({
               active: activeHomeMenu === HomeActiveMenu.team,
             })}
             onClick={() => handleScroll('team')}
@@ -99,6 +102,17 @@ const Sider: React.FC = () => {
             {t('sider.menu.team')}
           </a>
         </div>
+      </div>
+      <div className="socials">
+        <a href={t('sider.links.twitter')} target="">
+          <img src={twImg} alt="" />
+        </a>
+        <a href={t('sider.links.medium')} target="">
+          <img src={mdImg} alt="" />
+        </a>
+        <a href={t('sider.links.linkedin')} target="">
+          <img src={liImg} alt="" />
+        </a>
       </div>
     </nav>
   )

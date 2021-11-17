@@ -33,7 +33,7 @@ nav {
   position: fixed;
   top: 100%;
   left: 0;
-  width: 500px;
+  width: 350px;
   height: 100vh;
   padding-left: 40px;
   display: flex;
@@ -59,6 +59,16 @@ nav {
       &.active {
         transform: scale(1.25);
       }
+    }
+  }
+
+  .socials {
+    position: absolute;
+    bottom: 24px;
+    left: 40px;
+
+    a {
+      margin-right: 12px;
     }
   }
 }
