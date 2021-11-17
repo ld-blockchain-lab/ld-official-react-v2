@@ -41,6 +41,11 @@
         "desc_5": "Global meet-up host for LD Portfolio and sponsor of Hackathon",
         "desc_6": "Key players in top crypto projects",
         "desc_7": "Superior Post-investment Service"
+      },
+      "team": {
+        "desc_1": "If you have an innovative idea and would like to make your dream come true with our support, please send a summary of your project, as well as a brochure and/or white paper to:",
+        "email": "BP@ldcap.com",
+        "twitter": "@LD_Capital"
       }
     },
     "footer": {

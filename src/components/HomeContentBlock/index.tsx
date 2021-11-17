@@ -5,6 +5,7 @@ import System, { HomeActiveMenu } from '../../store/system'
 
 const Content = styled.div`
   min-height: 100vh;
+  position: relative;
 `
 
 export const HomeContentBlock: React.FC<{ activeTag: HomeActiveMenu }> = ({
@@ -20,8 +21,8 @@ export const HomeContentBlock: React.FC<{ activeTag: HomeActiveMenu }> = ({
     const offset = $(dom).offset()
     const outHeight = $(dom).outerHeight()
     if (!offset || !outHeight) return
-    const start = offset.top
-    const end = start + outHeight
+    const start = offset.top - 1
+    const end = start + outHeight - 1
     if (pageY >= start && pageY < end) {
       setActiveHomeMenu(activeTag)
     }

@@ -41,10 +41,6 @@ export class ServerWalletAPI {
         name: 'WEB 3.0',
         projects: [],
       },
-      {
-        name: 'WEB 3.0',
-        projects: [],
-      },
     ]
     mock.forEach((p) => {
       const ran = Math.round(Math.random() * 20) + 10
