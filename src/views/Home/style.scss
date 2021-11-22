@@ -9,6 +9,16 @@
   padding-top: 20px;
   padding-bottom: 150px;
 }
+#reports {
+  .report-link {
+    text-decoration: none;
+    color: var(--primary-color);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
 
 @media screen and (max-width: 600px) {
   @import './style.m.scss';
