@@ -48,6 +48,14 @@ code {
   padding-top: 80px;
   padding-left: 350px;
   padding-right: 180px;
+  padding-bottom: 40vh;
+}
+
+
+@media screen and (max-width: 1100px) {
+  .single-page {
+    padding-right: 60px;
+  }
 }
 
 @media screen and (max-width: 600px) {

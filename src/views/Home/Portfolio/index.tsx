@@ -39,6 +39,10 @@ const StyledProjectGroup = styled.div`
       white-space: nowrap;
     }
   }
+
+  &.lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
 `
 
 function getLink(link: string): string | undefined {
@@ -88,6 +92,31 @@ export const Portfolio: React.FC = () => {
         {portfolio.map((group) => (
           <ProjectGroup key={group.name} data={group} />
         ))}
+        <HomeContentTitle.T2 className="title-t2">Fund</HomeContentTitle.T2>
+        <StyledProjectGroup className="lg">
+          <a className="project">
+            <div className="project-icon">
+              <img
+                src="//assets.ldcap.zjzsxhy.com/20211124/973b62ee-4ad9-4e61-9f64-f60df9a080fb.png"
+                alt=""
+              />
+            </div>
+            <div className="project-name">
+              <span>Metaverse Alliance</span>
+            </div>
+          </a>
+          <a className="project">
+            <div className="project-icon">
+              <img
+                src="//assets.ldcap.zjzsxhy.com/20211123/2ed34ffe-c72b-4802-a7b5-6a75494c48e4.png"
+                alt=""
+              />
+            </div>
+            <div className="project-name">
+              <span>NFT FUND</span>
+            </div>
+          </a>
+        </StyledProjectGroup>
       </div>
     </HomeContentBlock>
   )

@@ -13,7 +13,7 @@ const T2 = styled.div`
 `
 
 const T3 = styled.div`
-  font-size: 18px;
+  font-size: 20px;
   margin: 24px 0;
 `
 

@@ -15,6 +15,7 @@ import { HomeActiveMenu } from '../../../store/system'
 const StyledP = styled.div`
   font-size: 17px;
   line-height: 2;
+  text-align: justify;
 
   &::before {
     content: '•';

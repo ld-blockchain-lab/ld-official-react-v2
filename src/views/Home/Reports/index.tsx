@@ -11,6 +11,7 @@ const StyledP = styled.div`
   font-size: 16px;
   opacity: 0.5;
   margin-bottom: 20px;
+  text-align: justify;
 `
 
 const StyledTime = styled.div`
