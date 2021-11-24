@@ -12,7 +12,7 @@
     "start": "serve -s build",
     "lint": "eslint src",
     "mock": "http-server ./public",
-    "cdn": "scp -r build/* deploy@39.98.92.83:~/public/kingdomx/"
+    "cdn": "scp -r build/* deploy@39.98.92.83:~/public/ldcap/"
   },
   "dependencies": {
     "@lay2/pw-core": "0.4.0-alpha.8",
@@ -43,6 +43,7 @@
     "i18next": "^20.2.2",
     "jquery": "^3.6.0",
     "jsonwebtoken": "^8.5.1",
+    "moment": "^2.29.1",
     "qrcode.react": "^1.0.1",
     "react": "^17.0.0",
     "react-better-tilt": "1.5.14",

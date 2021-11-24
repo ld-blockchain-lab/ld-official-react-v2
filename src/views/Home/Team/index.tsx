@@ -25,6 +25,7 @@ const StyledTeamContent = styled.div`
     z-index: 3;
     font-size: 17px;
     line-height: 2;
+    padding-top: 80px;
 
     .desc {
       margin-bottom: 30px;
@@ -47,8 +48,10 @@ export const Team: React.FC = () => {
             <img src={teamBgImg} alt="" />
           </div>
           <div className="text">
-            <HomeContentTitle.T1>{t('sider.menu.team')}</HomeContentTitle.T1>
-            <div className="desc">{t('home.team.desc_1')}</div>
+            {/* <HomeContentTitle.T1>{t('sider.menu.team')}</HomeContentTitle.T1> */}
+            <HomeContentTitle.T2 className="desc">
+              {t('home.team.desc_1')}
+            </HomeContentTitle.T2>
             <div className="desc">
               <div>
                 {'Email: '}

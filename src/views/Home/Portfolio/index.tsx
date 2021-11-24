@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import { useTranslation } from 'react-i18next'
+// import { useTranslation } from 'react-i18next'
 import HomeContentBlock from '../../../components/HomeContentBlock'
 import HomeContentTitle from '../../../components/HomeContentTitle'
 import { HomeActiveMenu } from '../../../store/system'
@@ -12,29 +12,54 @@ import serverWalletAPI, {
 const StyledProjectGroup = styled.div`
   display: grid;
   grid-template-columns: repeat(8, 1fr);
-  row-gap: 30px;
+  column-gap: 40px;
+  row-gap: 50px;
 
   .project {
     display: block;
     text-decoration: none;
+    min-width: 0;
+    color: #000;
+    position: relative;
+    padding-bottom: 20px;
 
     img {
-      margin-bottom: 10px;
+      width: 100%;
+      height: 50px;
+      object-fit: contain;
+    }
+
+    &-name {
+      font-size: 12px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      white-space: nowrap;
     }
   }
 `
 
+function getLink(link: string): string | undefined {
+  if (!link) return undefined
+  if (link === '__NOT_SET__') return undefined
+  if (!link.startsWith('http')) return undefined
+  return link
+}
+
 const ProjectGroup: React.FC<{ data: projectGroupData }> = ({ data }) => {
   return (
     <>
-      <HomeContentTitle.T2>{data.name}</HomeContentTitle.T2>
+      <HomeContentTitle.T2 className="title-t2">
+        {data.name}
+      </HomeContentTitle.T2>
       <StyledProjectGroup>
         {data.projects.map((p, i) => (
-          <a className="project" href={p.link} target="_blank" key={i}>
-            <div>
-              <img src={p.icon} alt="" />
+          <a className="project" href={getLink(p.link)} target="_blank" key={i}>
+            <div className="project-icon">
+              <img src={p.logoUrl} alt="" />
             </div>
-            <div>
+            <div className="project-name">
               <span>{p.name}</span>
             </div>
           </a>
@@ -45,7 +70,7 @@ const ProjectGroup: React.FC<{ data: projectGroupData }> = ({ data }) => {
 }
 
 export const Portfolio: React.FC = () => {
-  const { t } = useTranslation('trans')
+  // const { t } = useTranslation('trans')
   const [portfolio, setPortfolio] = useState<portfolioData>([])
 
   useEffect(() => {
@@ -58,7 +83,7 @@ export const Portfolio: React.FC = () => {
   return (
     <HomeContentBlock activeTag={HomeActiveMenu.portfolio}>
       <div id="portfolio" className="single-page">
-        <HomeContentTitle.T1>{t('sider.menu.portfolio')}</HomeContentTitle.T1>
+        {/* <HomeContentTitle.T1>{t('sider.menu.portfolio')}</HomeContentTitle.T1> */}
         {portfolio.map((group) => (
           <ProjectGroup key={group.name} data={group} />
         ))}

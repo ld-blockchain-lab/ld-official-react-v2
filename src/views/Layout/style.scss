@@ -14,9 +14,15 @@ header {
 
   img {
     display: inline-block;
-    width: 60px;
+    height: 50px;
     transform: scale(0.8);
     transition: all ease 0.2s;
+
+    &.text-img {
+      margin-left: 0;
+      width: 0;
+      object-fit: cover;
+    }
   }
 
   &.top {
@@ -24,8 +30,13 @@ header {
     height: 130px;
 
     img {
-      width: 60px;
+      height: 50px;
       transform: scale(1);
+
+      &.text-img {
+        margin-left: 6px;
+        width: 150px;
+      }
     }
   }
 }

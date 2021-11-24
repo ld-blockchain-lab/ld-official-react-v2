@@ -3,7 +3,8 @@ import { useTranslation } from 'react-i18next'
 import classname from 'classnames'
 import $ from 'jquery'
 import System, { HomeActiveMenu } from '../../store/system'
-import logoImg from '../../assets/img/logo.svg'
+import logoIconImg from '../../assets/img/logo-icon.svg'
+import logoTextImg from '../../assets/img/logo-text.svg'
 import twImg from '../../assets/img/icon_twitter.svg'
 import mdImg from '../../assets/img/icon_medium.svg'
 import liImg from '../../assets/img/icon_linkin.svg'
@@ -21,7 +22,8 @@ const Header: React.FC = ({ children }) => {
 
   return (
     <header className={isTop ? 'top' : ''}>
-      <img src={logoImg} className="border-img" alt="" />
+      <img src={logoIconImg} alt="" />
+      <img src={logoTextImg} className="text-img" alt="" />
     </header>
   )
 }

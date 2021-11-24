@@ -1,6 +1,6 @@
 import { SERVER_URL } from '../constants'
 import axios, { AxiosInstance } from 'axios'
-import mockProjectImg from '../assets/img/icon_mock_project.svg'
+// import mockProjectImg from '../assets/img/icon_mock_project.svg'
 
 export interface JsonResponseData<T = any> {
   success: boolean
@@ -14,7 +14,7 @@ export interface JsonResponseData<T = any> {
 export interface projectData {
   name: string
   link: string
-  icon: string
+  logoUrl: string
 }
 
 export interface projectGroupData {
@@ -28,7 +28,8 @@ export interface reportData {
   id: number
   url: string
   title: string
-  displayDatetime: Date
+  description: string
+  displayDatetime: string
 }
 
 export class ServerWalletAPI {
@@ -47,36 +48,40 @@ export class ServerWalletAPI {
 
   // TODO:
   async getPortfolio(): Promise<portfolioData> {
-    const mock: portfolioData = [
-      {
-        name: 'Metaverse',
-        projects: [],
-      },
-      {
-        name: 'Tech infrastructure',
-        projects: [],
-      },
-      {
-        name: 'DeFi Eco',
-        projects: [],
-      },
-      {
-        name: 'WEB 3.0',
-        projects: [],
-      },
-    ]
-    mock.forEach((p) => {
-      const ran = Math.round(Math.random() * 20) + 10
-      for (let i = 0; i < ran; i++) {
-        p.projects.push({
-          name: `Project ${i}`,
-          link: '#',
-          icon: mockProjectImg,
-        })
-      }
-    })
+    const resp = await this.axios.get('/api/v1/portfolio')
+    const data = this.getResponseData<portfolioData>(resp.data)
+    if (data) return data
+    throw new Error('fetch error')
+    // const mock: portfolioData = [
+    //   {
+    //     name: 'Metaverse',
+    //     projects: [],
+    //   },
+    //   {
+    //     name: 'Tech infrastructure',
+    //     projects: [],
+    //   },
+    //   {
+    //     name: 'DeFi Eco',
+    //     projects: [],
+    //   },
+    //   {
+    //     name: 'WEB 3.0',
+    //     projects: [],
+    //   },
+    // ]
+    // mock.forEach((p) => {
+    //   const ran = Math.round(Math.random() * 20) + 10
+    //   for (let i = 0; i < ran; i++) {
+    //     p.projects.push({
+    //       name: `Project ${i}`,
+    //       link: '#',
+    //       icon: mockProjectImg,
+    //     })
+    //   }
+    // })
 
-    return await Promise.resolve(mock)
+    // return await Promise.resolve(mock)
   }
 
   async getReports(): Promise<reportData[]> {

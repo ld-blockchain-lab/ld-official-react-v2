@@ -87,8 +87,6 @@ export const Glance: React.FC = () => {
         <HomeContentTitle.T2>{t('home.vision.title')}</HomeContentTitle.T2>
         <StyledP>{t('home.vision.desc_1')}</StyledP>
         <StyledP>{t('home.vision.desc_2')}</StyledP>
-        <HomeContentTitle.T2>{t('home.cultur.title')}</HomeContentTitle.T2>
-        <StyledP>{t('home.cultur.desc')}</StyledP>
         <HomeContentTitle.T2>{t('home.feature.title')}</HomeContentTitle.T2>
         {features.map((feature) => (
           <StyledFeature key={feature.desc}>

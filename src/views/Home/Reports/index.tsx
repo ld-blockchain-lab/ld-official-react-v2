@@ -1,10 +1,31 @@
 import React, { useEffect, useState } from 'react'
-// import styled from 'styled-components'
+import styled from 'styled-components'
+import moment from 'moment'
 import { useTranslation } from 'react-i18next'
 import HomeContentBlock from '../../../components/HomeContentBlock'
 import HomeContentTitle from '../../../components/HomeContentTitle'
 import { HomeActiveMenu } from '../../../store/system'
 import serverWalletAPI, { reportData } from '../../../apis/ServerWalletAPI'
+
+const StyledP = styled.div`
+  font-size: 16px;
+  opacity: 0.5;
+  margin-bottom: 20px;
+`
+
+const StyledTime = styled.div`
+  font-size: 16px;
+  opacity: 0.3;
+`
+
+function formatDescription(text: string): string {
+  if (text.length > 250) return text.slice(0, 250) + '...'
+  return text
+}
+
+function formatTime(time: string): string {
+  return moment(time).format('ll')
+}
 
 export const Reports: React.FC = () => {
   const { t } = useTranslation('trans')
@@ -17,18 +38,20 @@ export const Reports: React.FC = () => {
       .catch((e) => console.log(e))
   }, [])
 
-  console.log(data)
-
   return (
     <HomeContentBlock activeTag={HomeActiveMenu.reports}>
       <div id="reports" className="single-page">
         <HomeContentTitle.T1>{t('sider.menu.reports')}</HomeContentTitle.T1>
         {data.map((report) => (
-          <HomeContentTitle.T2 key={report.id}>
-            <a href={report.url} target="_blank" className="report-link">
-              {report.title}
-            </a>
-          </HomeContentTitle.T2>
+          <div className="report">
+            <HomeContentTitle.T3 className="title-t3" key={report.id}>
+              <a href={report.url} target="_blank" className="report-link">
+                {report.title}
+              </a>
+            </HomeContentTitle.T3>
+            <StyledP>{formatDescription(report.description)}</StyledP>
+            <StyledTime>{formatTime(report.displayDatetime)}</StyledTime>
+          </div>
         ))}
       </div>
     </HomeContentBlock>
