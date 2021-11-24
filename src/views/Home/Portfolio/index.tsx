@@ -24,6 +24,7 @@ const StyledProjectGroup = styled.div`
     padding-bottom: 20px;
 
     img {
+      max-width: 100%;
       width: 100%;
       height: 50px;
       object-fit: contain;
