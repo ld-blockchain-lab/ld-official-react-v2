@@ -14,6 +14,7 @@ const StyledProjectGroup = styled.div`
   grid-template-columns: repeat(8, 1fr);
   column-gap: 40px;
   row-gap: 50px;
+  margin-bottom: 120px;
 
   .project {
     display: block;

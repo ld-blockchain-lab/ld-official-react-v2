@@ -29,6 +29,7 @@ const StyledTeamContent = styled.div`
 
     .desc {
       margin-bottom: 30px;
+      text-align: justify;
     }
 
     a {
