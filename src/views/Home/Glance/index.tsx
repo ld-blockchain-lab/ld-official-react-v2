@@ -81,14 +81,19 @@ export const Glance: React.FC = () => {
   return (
     <HomeContentBlock activeTag={HomeActiveMenu.glance}>
       <div id="glance" className="single-page">
-        <HomeContentTitle.T1>{t('sider.menu.glance')}</HomeContentTitle.T1>
-        <HomeContentTitle.T2>{t('home.story.title')}</HomeContentTitle.T2>
+        <HomeContentTitle.T2 className="glance-t2">
+          {t('home.story.title')}
+        </HomeContentTitle.T2>
         <StyledP>{t('home.story.desc_1')}</StyledP>
         <StyledP>{t('home.story.desc_2')}</StyledP>
-        <HomeContentTitle.T2>{t('home.vision.title')}</HomeContentTitle.T2>
+        <HomeContentTitle.T2 className="glance-t2">
+          {t('home.vision.title')}
+        </HomeContentTitle.T2>
         <StyledP>{t('home.vision.desc_1')}</StyledP>
         <StyledP>{t('home.vision.desc_2')}</StyledP>
-        <HomeContentTitle.T2>{t('home.feature.title')}</HomeContentTitle.T2>
+        <HomeContentTitle.T2 className="glance-t2">
+          {t('home.feature.title')}
+        </HomeContentTitle.T2>
         {features.map((feature) => (
           <StyledFeature key={feature.desc}>
             <img src={feature.icon} alt="" />
