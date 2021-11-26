@@ -5,16 +5,31 @@ const T1 = styled.div`
   font-size: 30px;
   text-transform: uppercase;
   margin: 80px 0;
+
+  @media screen and (max-width: 600px) {
+    font-size: 24px;
+    margin: 40px 0;
+  }
 `
 
 const T2 = styled.div`
   font-size: 24px;
   margin: 30px 0;
+
+  @media screen and (max-width: 600px) {
+    font-size: 20px;
+    margin: 20px 0;
+  }
 `
 
 const T3 = styled.div`
   font-size: 20px;
   margin: 24px 0;
+
+  @media screen and (max-width: 600px) {
+    font-size: 17px;
+    margin: 16px 0;
+  }
 `
 
 export const HomeContentTitle1: React.FC<{ className?: string }> = ({

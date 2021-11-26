@@ -1,0 +1,22 @@
+nav {
+  padding-left: 10px;
+  width: 30px;
+
+  .nav-menu > div {
+    margin-bottom: 0;
+    writing-mode: vertical-rl;
+  }
+  .nav-menu a {
+    font-size: 12px;
+    margin: 6px 0;
+
+    &.active {
+      transform: scale(1);
+      font-size: 18px;
+      opacity: 1;
+    }
+  }
+  .socials {
+    display: none;
+  }
+}

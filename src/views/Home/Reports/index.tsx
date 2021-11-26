@@ -12,11 +12,20 @@ const StyledP = styled.div`
   opacity: 0.5;
   margin-bottom: 20px;
   text-align: justify;
+
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
 `
 
 const StyledTime = styled.div`
   font-size: 16px;
   opacity: 0.3;
+
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+  }
 `
 
 function formatDescription(text: string): string {

@@ -5,6 +5,9 @@ import teamBgImg from '../../../assets/img/bg_team.png'
 import HomeContentBlock from '../../../components/HomeContentBlock'
 import HomeContentTitle from '../../../components/HomeContentTitle'
 import { HomeActiveMenu } from '../../../store/system'
+import twImg from '../../../assets/img/icon_twitter.svg'
+import mdImg from '../../../assets/img/icon_medium.svg'
+import liImg from '../../../assets/img/icon_linkin.svg'
 
 const StyledTeamContent = styled.div`
   position: relative;
@@ -37,6 +40,27 @@ const StyledTeamContent = styled.div`
       color: var(--primary-color);
     }
   }
+
+  .socials {
+    display: none;
+
+    a {
+      margin-right: 12px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .text {
+      padding-top: 0;
+      font-size: 14px;
+    }
+    .text .desc {
+      font-size: 16px;
+    }
+    .socials {
+      display: block;
+    }
+  }
 `
 
 export const Team: React.FC = () => {
@@ -66,6 +90,17 @@ export const Team: React.FC = () => {
                   {t('home.team.twitter')}
                 </a>
               </div>
+            </div>
+            <div className="socials">
+              <a href={t('sider.links.twitter')} target="">
+                <img src={twImg} alt="" />
+              </a>
+              <a href={t('sider.links.medium')} target="">
+                <img src={mdImg} alt="" />
+              </a>
+              <a href={t('sider.links.linkedin')} target="">
+                <img src={liImg} alt="" />
+              </a>
             </div>
           </div>
         </StyledTeamContent>

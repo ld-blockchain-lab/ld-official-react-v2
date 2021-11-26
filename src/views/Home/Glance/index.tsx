@@ -21,6 +21,10 @@ const StyledP = styled.div`
     content: '•';
     margin-right: 6px;
   }
+
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+  }
 `
 
 const StyledFeature = styled.div`
@@ -42,6 +46,15 @@ const StyledFeature = styled.div`
     width: 24px;
     object-fit: contain;
     margin-right: 12px;
+  }
+
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+
+    img {
+      height: 16px;
+      margin-right: 6px;
+    }
   }
 `
 

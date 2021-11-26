@@ -44,6 +44,14 @@ const StyledProjectGroup = styled.div`
   &.lg {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: repeat(3, 1fr);
+
+    &.lg {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 `
 
 function getLink(link: string): string | undefined {

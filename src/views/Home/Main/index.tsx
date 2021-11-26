@@ -9,6 +9,12 @@ const Content = styled.div`
   div {
     font-size: 80px;
   }
+
+  @media screen and (max-width: 600px) {
+    div {
+      font-size: 30px;
+    }
+  }
 `
 
 export const Main: React.FC = () => {
