@@ -19,6 +19,7 @@ export interface projectData {
 
 export interface projectGroupData {
   name: string
+  iconScale: number
   projects: projectData[]
 }
 

@@ -41,7 +41,7 @@ const StyledProjectGroup = styled.div`
     }
   }
 
-  &.lg {
+  &.scale-2 {
     grid-template-columns: repeat(4, 1fr);
   }
 
@@ -67,7 +67,7 @@ const ProjectGroup: React.FC<{ data: projectGroupData }> = ({ data }) => {
       <HomeContentTitle.T2 className="title-t2">
         {data.name}
       </HomeContentTitle.T2>
-      <StyledProjectGroup>
+      <StyledProjectGroup className={`scale-${data.iconScale}`}>
         {data.projects.map((p, i) => (
           <a className="project" href={getLink(p.link)} target="_blank" key={i}>
             <div className="project-icon">
@@ -101,8 +101,8 @@ export const Portfolio: React.FC = () => {
         {portfolio.map((group) => (
           <ProjectGroup key={group.name} data={group} />
         ))}
-        <HomeContentTitle.T2 className="title-t2">Fund</HomeContentTitle.T2>
-        <StyledProjectGroup className="lg">
+        {/* <HomeContentTitle.T2 className="title-t2">Fund</HomeContentTitle.T2> */}
+        {/* <StyledProjectGroup className="lg">
           <a className="project">
             <div className="project-icon">
               <img
@@ -125,7 +125,7 @@ export const Portfolio: React.FC = () => {
               <span>NFT FUND</span>
             </div>
           </a>
-        </StyledProjectGroup>
+        </StyledProjectGroup> */}
       </div>
     </HomeContentBlock>
   )
