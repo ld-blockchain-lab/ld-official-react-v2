@@ -9,6 +9,7 @@ import twImg from '../../assets/img/icon_twitter.svg'
 import mdImg from '../../assets/img/icon_medium.svg'
 import liImg from '../../assets/img/icon_linkin.svg'
 import './style.scss'
+import { Link, useLocation, useHistory } from 'react-router-dom'
 
 const HEADER_TOP = 200
 
@@ -35,20 +36,36 @@ const Sider: React.FC = () => {
   const [top, setTop] = useState(VH)
   const { pageY, activeHomeMenu } = System.useContainer()
 
+  const location = useLocation()
+  const history = useHistory()
+
   useEffect(() => {
-    const yy = Math.min(Math.max(VH - pageY, 0), VH)
-    setTop(yy)
-  }, [pageY])
+    if (location.pathname === '/') {
+      const yy = Math.min(Math.max(VH - pageY, 0), VH)
+      setTop(yy)
+    } else {
+      setTop(0)
+    }
+  }, [pageY, location])
 
   const handleScroll = (id: string): void => {
-    const offset = $(`#${id}`).offset()
-    if (!offset) return
-    $([document.documentElement, document.body]).animate(
-      {
-        scrollTop: offset.top,
-      },
-      300
-    )
+    if (location.pathname === '/') {
+      const offset = $(`#${id}`).offset()
+      if (!offset) return
+      $([document.documentElement, document.body]).animate(
+        {
+          scrollTop: offset.top,
+        },
+        300
+      )
+    } else {
+      history.push('/')
+      setTimeout(() => {
+        const offset = $(`#${id}`).offset()
+        if (!offset) return
+        $([document.documentElement, document.body]).scrollTop(offset.top)
+      }, 0)
+    }
   }
 
   return (
@@ -103,6 +120,16 @@ const Sider: React.FC = () => {
           >
             {t('sider.menu.team')}
           </a>
+        </div>
+        <div>
+          <Link
+            className={classname({
+              active: activeHomeMenu === HomeActiveMenu.jobs,
+            })}
+            to="/jobs"
+          >
+            {t('sider.menu.jobs')}
+          </Link>
         </div>
       </div>
       <div className="socials">

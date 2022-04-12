@@ -53,7 +53,7 @@ export const Reports: React.FC = () => {
       <div id="reports" className="single-page">
         <HomeContentTitle.T1>{t('sider.menu.reports')}</HomeContentTitle.T1>
         {data.map((report) => (
-          <div className="report">
+          <div key={report.id} className="report">
             <HomeContentTitle.T3 className="title-t3" key={report.id}>
               <a href={report.url} target="_blank" className="report-link">
                 {report.title}

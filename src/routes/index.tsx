@@ -9,10 +9,12 @@ import {
 import { I18nextProvider } from 'react-i18next'
 import i18n from '../i18n'
 import { Home } from '../views/Home'
+import { Jobs } from '../views/Jobs'
 import { Layout } from '../views/Layout'
 
 export enum RoutePath {
   Home = '/',
+  Jobs = '/jobs',
 }
 
 export const RouterContext = React.createContext({
@@ -57,6 +59,12 @@ const routes: MibaoRouterProps[] = [
     exact: true,
     key: 'Home',
     path: RoutePath.Home,
+  },
+  {
+    component: Jobs,
+    exact: true,
+    key: 'Jobs',
+    path: RoutePath.Jobs,
   },
 ]
 

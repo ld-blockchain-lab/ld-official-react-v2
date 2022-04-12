@@ -9,12 +9,13 @@
         "glance": "Glance",
         "portfolio": "Portfolio",
         "reports": "Reports",
-        "team": "Contact"
+        "team": "Contact",
+        "jobs": "Hiring"
       },
       "links": {
         "twitter": "https://twitter.com/ld_capital",
         "medium": "https://ld-capital.medium.com/",
-        "linkedin": "https://www.linkedin.com/company/ld-capital/about/"
+        "linkedin": "https://www.linkedin.com/company/ldcapital/"
       }
     },
     "home": {
@@ -45,10 +46,16 @@
       "team": {
         "desc_1": "If you have an innovative idea and would like to make your dream come true with our support, please send a summary of your project, as well as a brochure and/or white paper to:",
         "email": "BP@ldcap.com",
-        "twitter": "@LD_Capital"
+        "twitter": "@LD_Capital",
+        "linkedin": "LDCapital"
       }
     },
     "footer": {
+    },
+    "jobs": {
+      "responsibilities": "Job Responsibilities",
+      "requirements": "Job Requirements",
+      "email": "contact@ldcap.com"
     }
   }
 }

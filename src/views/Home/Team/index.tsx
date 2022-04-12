@@ -90,6 +90,12 @@ export const Team: React.FC = () => {
                   {t('home.team.twitter')}
                 </a>
               </div>
+              <div>
+                {'LinkedIn: '}
+                <a href={t('sider.links.linkedin')} target="_blank">
+                  {t('home.team.linkedin')}
+                </a>
+              </div>
             </div>
             <div className="socials">
               <a href={t('sider.links.twitter')} target="">

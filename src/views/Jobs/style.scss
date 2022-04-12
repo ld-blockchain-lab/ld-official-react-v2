@@ -1,0 +1,46 @@
+#jobs {
+  min-height: 100vh;
+  padding-top: 130px;
+
+  .email {
+    margin-top: 50px;
+    font-size: 24px;
+
+    a {
+      text-decoration: none;
+      color: var(--primary-color);
+    }
+  }
+}
+
+#jobs .job {
+  line-height: 35px;
+
+  .title {
+    font-size: 24px;
+    margin-bottom: 25px;
+    margin-top: 50px;
+  }
+
+  .t2 {
+    font-size: 20px;
+  }
+
+  ul {
+    padding: 0;
+    margin-bottom: 25px;
+  }
+
+  ul li {
+    display: block;
+
+    &::before {
+      content: "•";
+      margin-right: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  @import './style.m.scss';
+}

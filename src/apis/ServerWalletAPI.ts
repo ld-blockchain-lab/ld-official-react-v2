@@ -33,6 +33,13 @@ export interface reportData {
   displayDatetime: string
 }
 
+export interface JobData {
+  id: number
+  title: string
+  responsibilities: string[]
+  requirements: string[]
+}
+
 export class ServerWalletAPI {
   private readonly axios: AxiosInstance
 
@@ -90,6 +97,15 @@ export class ServerWalletAPI {
     const data = this.getResponseData<reportData[]>(resp.data)
     if (data) return data
     throw new Error('fetch error')
+  }
+
+  async getJobs(): Promise<JobData[]> {
+    const resp = await this.axios.get('/api/v1/jobs')
+    const data = this.getResponseData<JobData[]>(resp.data)
+    if (data) {
+      return data
+    }
+    return []
   }
 }
 

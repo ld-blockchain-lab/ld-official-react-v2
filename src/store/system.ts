@@ -7,6 +7,7 @@ export enum HomeActiveMenu {
   portfolio,
   reports,
   team,
+  jobs,
 }
 
 interface useSystemProps {
