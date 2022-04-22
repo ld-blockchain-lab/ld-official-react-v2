@@ -3,18 +3,26 @@ import styled from 'styled-components'
 
 const CommonButtonContainer = styled.button`
   padding: 6px 12px;
-  border: var(--primary-color) solid 2px;
-  border-radius: 3px;
-  background-color: var(--primary-color-p10);
-  color: var(--primary-color);
+  border: #000 solid 2px;
+  background-color: transparent;
+  color: #000;
   cursor: pointer;
 
   &:hover {
-    background-color: var(--primary-color-p25);
+    background-color: #000;
+    color: #fff;
   }
   &:disabled {
     cursor: not-allowed;
     opacity: 0.5;
+  }
+  &:disabled:hover {
+    background-color: transparent;
+    color: #000;
+  }
+  &.large {
+    padding: 12px 24px;
+    font-size: 18px;
   }
 `
 
@@ -27,7 +35,7 @@ interface CommonButtonProps {
   disabled?: boolean
 }
 
-export const CommonButton: React.FC<CommonButtonProps> = ({
+const CommonButton: React.FC<CommonButtonProps> = ({
   children,
   id,
   className,
@@ -45,3 +53,5 @@ export const CommonButton: React.FC<CommonButtonProps> = ({
     </CommonButtonContainer>
   )
 }
+
+export default CommonButton

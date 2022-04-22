@@ -3,17 +3,16 @@ import styled from 'styled-components'
 
 const CommonInputContainer = styled.input`
   padding: 4px 8px;
-  border: var(--primary-color) solid 2px;
-  border-radius: 3px;
-  background-color: var(--primary-color-p10);
-  color: var(--primary-color);
+  border: #000 solid 2px;
+  background-color: #fff;
+  color: #000;
   outline: none;
 
   &:hover {
-    box-shadow: 0 0 0 2px var(--primary-color-p50);
+    box-shadow: 0 0 0 2px var(--primary-color-p25);
   }
   &:focus {
-    box-shadow: 0 0 0 3px var(--primary-color-p50);
+    box-shadow: 0 0 0 3px var(--primary-color-p25);
   }
 `
 
@@ -27,7 +26,7 @@ interface CommonInputProps {
   disbaled?: boolean
 }
 
-export const CommonInput: React.FC<CommonInputProps> = ({
+const CommonInput: React.FC<CommonInputProps> = ({
   children,
   id,
   className,
@@ -47,3 +46,5 @@ export const CommonInput: React.FC<CommonInputProps> = ({
     </CommonInputContainer>
   )
 }
+
+export default CommonInput

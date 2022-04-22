@@ -52,6 +52,26 @@
     },
     "footer": {
     },
+    "reports": {
+      "article": "Articles",
+      "read": "Read The Report",
+      "form": {
+        "desc1": "Enter your details below to receive a copy of this report.",
+        "desc2": "By submitting this form, you are agreeing to LD-CAP communications. You can unsubscribe at any time.",
+        "email": "Email Address",
+        "name": "Full Name",
+        "role": "Industry Role (Select all that apply)",
+        "roles": {
+          "developer": "Developer",
+          "investor": "Investor",
+          "trader": "Trader",
+          "employed": "Employed by the industry",
+          "other": "Other"
+        }
+      },
+      "success": "You're all set. The download will start soon.",
+      "submit": "Submit"
+    },
     "jobs": {
       "responsibilities": "Job Responsibilities",
       "requirements": "Job Requirements",

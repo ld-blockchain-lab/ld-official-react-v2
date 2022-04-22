@@ -22,6 +22,10 @@
     text-decoration: none;
     color: var(--primary-color);
 
+    small {
+      margin-left: 12px;
+    }
+
     &:hover {
       text-decoration: underline;
     }
@@ -29,6 +33,12 @@
 
   .report {
     margin-bottom: 80px;
+
+    &.self {
+      .title-t3 {
+        margin-bottom: 12px;
+      }
+    }
   }
   .title-t3 {
     margin-bottom: 24px;

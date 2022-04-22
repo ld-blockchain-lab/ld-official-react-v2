@@ -1,0 +1,82 @@
+#report {
+  min-height: 100vh;
+  padding-top: 130px;
+
+  .container {
+    width: 80%;
+    margin: auto;
+    padding: 0;
+  }
+
+  .content {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    .titles {
+      flex-grow: 0;
+      flex-shrink: 0;
+      align-self: center;
+    }
+  }
+
+  .title {
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+  .sub-title {
+    margin-bottom: 12px;
+  }
+  .time {
+    margin-bottom: 0;
+  }
+  .description {
+    margin-left: 30px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .read {
+    text-align: center;
+  }
+  .form {
+    width: 80%;
+    margin: auto;
+    border: #000 solid 2px;
+    padding: 36px;
+
+    .desc {
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    .submit {
+      text-align: center;
+    }
+
+    .success {
+      color: #2bb706;
+      font-size: 18px;
+    }
+
+    .input {
+      input {
+        width: 100%;
+        font-size: 18px;
+      }
+
+      &.select {
+        margin-top: 12px;
+      }
+    }
+    .row {
+      margin-bottom: 24px;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  @import './style.m.scss';
+}

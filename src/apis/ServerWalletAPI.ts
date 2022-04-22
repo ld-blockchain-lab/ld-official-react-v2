@@ -33,11 +33,27 @@ export interface reportData {
   displayDatetime: string
 }
 
+export interface SelfReportData {
+  id: number
+  title: string
+  subTitle: string | null
+  description: string
+  displayDatetime: string
+}
+
 export interface JobData {
   id: number
   title: string
   responsibilities: string[]
   requirements: string[]
+}
+
+export interface CustomerJsonData {
+  id: number
+  name: string
+  email: string
+  role: string
+  source: string
 }
 
 export class ServerWalletAPI {
@@ -99,6 +115,20 @@ export class ServerWalletAPI {
     throw new Error('fetch error')
   }
 
+  async getSelfReports(): Promise<SelfReportData[]> {
+    const resp = await this.axios.get('/api/v1/selfreports')
+    const data = this.getResponseData<SelfReportData[]>(resp.data)
+    if (data) return data
+    throw new Error('fetch error')
+  }
+
+  async getSelfReport(id: string): Promise<SelfReportData> {
+    const resp = await this.axios.get(`/api/v1/selfreport/${id}`)
+    const data = this.getResponseData<SelfReportData>(resp.data)
+    if (data) return data
+    throw new Error('fetch error')
+  }
+
   async getJobs(): Promise<JobData[]> {
     const resp = await this.axios.get('/api/v1/jobs')
     const data = this.getResponseData<JobData[]>(resp.data)
@@ -106,6 +136,17 @@ export class ServerWalletAPI {
       return data
     }
     return []
+  }
+
+  async addCustomer(
+    customer: Omit<CustomerJsonData, 'id'>
+  ): Promise<{ file: string }> {
+    const resp = await this.axios.post('/api/v1/customer', customer)
+    const data = this.getResponseData<{ file: string }>(resp.data)
+    if (data) {
+      return data
+    }
+    return { file: '' }
   }
 }
 
