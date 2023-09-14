@@ -54,6 +54,10 @@ const StyledProjectGroup = styled.div`
   }
 `
 
+function cleanUrl(url: string): string {
+  return url.replace('https://', '//').replace('http://', '//')
+}
+
 function getLink(link: string): string | undefined {
   if (!link) return undefined
   if (link === '__NOT_SET__') return undefined
@@ -71,7 +75,7 @@ const ProjectGroup: React.FC<{ data: projectGroupData }> = ({ data }) => {
         {data.projects.map((p, i) => (
           <a className="project" href={getLink(p.link)} target="_blank" key={i}>
             <div className="project-icon">
-              <img src={p.logoUrl} alt="" />
+              <img src={cleanUrl(p.logoUrl)} alt="" />
             </div>
             <div className="project-name">
               <span>{p.name}</span>

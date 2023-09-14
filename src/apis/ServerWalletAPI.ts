@@ -25,12 +25,17 @@ export interface projectGroupData {
 
 export type portfolioData = projectGroupData[]
 
-export interface reportData {
+export interface ReportItemJsonData {
   id: number
   url: string
+  lang: 'en' | 'zh-cn'
   title: string
   description: string
   displayDatetime: string
+}
+
+export interface ReportJsonData extends ReportItemJsonData {
+  i18n: ReportItemJsonData[]
 }
 
 export interface SelfReportData {
@@ -108,9 +113,9 @@ export class ServerWalletAPI {
     // return await Promise.resolve(mock)
   }
 
-  async getReports(): Promise<reportData[]> {
-    const resp = await this.axios.get('/api/v1/reports')
-    const data = this.getResponseData<reportData[]>(resp.data)
+  async getReports(): Promise<ReportJsonData[]> {
+    const resp = await this.axios.get('/api/v1/reports2')
+    const data = this.getResponseData<ReportJsonData[]>(resp.data)
     if (data) return data
     throw new Error('fetch error')
   }

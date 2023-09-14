@@ -6,10 +6,15 @@ import HomeContentBlock from '../../../components/HomeContentBlock'
 import HomeContentTitle from '../../../components/HomeContentTitle'
 import { HomeActiveMenu } from '../../../store/system'
 import serverWalletAPI, {
-  reportData,
+  ReportJsonData,
   SelfReportData,
 } from '../../../apis/ServerWalletAPI'
 import { Link } from 'react-router-dom'
+
+const langMap = {
+  en: 'English',
+  'zh-cn': '简体中文',
+}
 
 const StyledP = styled.div`
   font-size: 16px;
@@ -20,6 +25,22 @@ const StyledP = styled.div`
   @media screen and (max-width: 600px) {
     font-size: 14px;
     margin-bottom: 16px;
+  }
+`
+
+const StyledOtherVer = styled.div`
+  font-size: 16px;
+  opacity: 0.6;
+  margin-bottom: 20px;
+
+  a {
+    text-decoration: none;
+    margin: 0 6px;
+    color: #000;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `
 
@@ -43,7 +64,7 @@ function formatTime(time: string): string {
 
 export const Reports: React.FC = () => {
   const { t } = useTranslation('trans')
-  const [data, setData] = useState<reportData[]>([])
+  const [data, setData] = useState<ReportJsonData[]>([])
   const [selfData, setSelfData] = useState<SelfReportData[]>([])
 
   useEffect(() => {
@@ -82,6 +103,18 @@ export const Reports: React.FC = () => {
               </a>
             </HomeContentTitle.T3>
             <StyledP>{formatDescription(report.description)}</StyledP>
+            {report.i18n.length > 1 && (
+              <StyledOtherVer>
+                <span>Other version:</span>
+                {report.i18n
+                  .filter((r) => r.lang !== report.lang)
+                  .map((r) => (
+                    <a href={r.url} target="_blank">
+                      [{langMap[r.lang]}]
+                    </a>
+                  ))}
+              </StyledOtherVer>
+            )}
             <StyledTime>{formatTime(report.displayDatetime)}</StyledTime>
           </div>
         ))}
