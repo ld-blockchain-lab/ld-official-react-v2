@@ -94,6 +94,18 @@ const Sider: React.FC = () => {
         <div>
           <a
             className={classname({
+              active: activeHomeMenu === HomeActiveMenu.bankTrading,
+            })}
+            onClick={() => handleScroll('bank-trading')}
+          >
+            {t('sider.menu.bankTrading1')}
+            <br />
+            {t('sider.menu.bankTrading2')}
+          </a>
+        </div>
+        <div>
+          <a
+            className={classname({
               active: activeHomeMenu === HomeActiveMenu.portfolio,
             })}
             onClick={() => handleScroll('portfolio')}

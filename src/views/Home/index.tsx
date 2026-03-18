@@ -1,6 +1,7 @@
 import React from 'react'
 import Main from './Main'
 import Glance from './Glance'
+import BankTrading from './BankTrading'
 import Portfolio from './Portfolio'
 import Reports from './Reports'
 import Team from './Team'
@@ -11,6 +12,7 @@ export const Home: React.FC = () => {
     <>
       <Main />
       <Glance />
+      <BankTrading />
       <Portfolio />
       <Reports />
       <Team />

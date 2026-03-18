@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-// import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 import HomeContentBlock from '../../../components/HomeContentBlock'
 import HomeContentTitle from '../../../components/HomeContentTitle'
 import { HomeActiveMenu } from '../../../store/system'
@@ -8,6 +8,15 @@ import serverWalletAPI, {
   portfolioData,
   projectGroupData,
 } from '../../../apis/ServerWalletAPI'
+
+import portfolioImg1 from '../../../assets/img/protfolio/1.png'
+import portfolioImg2 from '../../../assets/img/protfolio/2.png'
+import portfolioImg3 from '../../../assets/img/protfolio/3.png'
+import portfolioImg4 from '../../../assets/img/protfolio/4.png'
+import portfolioImg5 from '../../../assets/img/protfolio/5.png'
+import portfolioImg6 from '../../../assets/img/protfolio/6.png'
+import portfolioImg7 from '../../../assets/img/protfolio/7.png'
+import portfolioImg8 from '../../../assets/img/protfolio/8.png'
 
 const StyledProjectGroup = styled.div`
   display: grid;
@@ -54,6 +63,18 @@ const StyledProjectGroup = styled.div`
   }
 `
 
+const StyledPortfolioImages = styled.div`
+  margin-bottom: 80px;
+  text-align: center;
+
+  img {
+    display: inline-block;
+    height: 50px;
+    margin-right: 40px;
+    margin-bottom: 30px;
+  }
+`
+
 function cleanUrl(url: string): string {
   return url.replace('https://', '//').replace('http://', '//')
 }
@@ -88,7 +109,7 @@ const ProjectGroup: React.FC<{ data: projectGroupData }> = ({ data }) => {
 }
 
 export const Portfolio: React.FC = () => {
-  // const { t } = useTranslation('trans')
+  const { t } = useTranslation('trans')
   const [portfolio, setPortfolio] = useState<portfolioData>([])
 
   useEffect(() => {
@@ -101,9 +122,24 @@ export const Portfolio: React.FC = () => {
   return (
     <HomeContentBlock activeTag={HomeActiveMenu.portfolio}>
       <div id="portfolio" className="single-page">
-        {/* <HomeContentTitle.T1>{t('sider.menu.portfolio')}</HomeContentTitle.T1> */}
+        <StyledPortfolioImages>
+          <HomeContentTitle.T1>{t('sider.menu.portfolio')}</HomeContentTitle.T1>
+          <div>
+            <img src={portfolioImg1} alt="" />
+            <img src={portfolioImg2} alt="" />
+            <img src={portfolioImg3} alt="" />
+            <img src={portfolioImg4} alt="" />
+            <img src={portfolioImg5} alt="" />
+            <img src={portfolioImg6} alt="" />
+            <img src={portfolioImg7} alt="" />
+            <img src={portfolioImg8} alt="" />
+          </div>
+        </StyledPortfolioImages>
+
         {portfolio.map((group) => (
-          <ProjectGroup key={group.name} data={group} />
+          <div style={{ display: 'none' }}>
+            <ProjectGroup key={group.name} data={group} />
+          </div>
         ))}
         {/* <HomeContentTitle.T2 className="title-t2">Fund</HomeContentTitle.T2> */}
         {/* <StyledProjectGroup className="lg">

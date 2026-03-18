@@ -7,6 +7,8 @@
       "menu": {
         "home": "Home",
         "glance": "Glance",
+        "bankTrading1": "Investment",
+        "bankTrading2": "Banks Trading",
         "portfolio": "Portfolio",
         "reports": "Reports",
         "team": "Contact",
@@ -21,8 +23,8 @@
     "home": {
       "story": {
         "title": "Our Story",
-        "desc_1": "LD Capital is a leading crypto fund in investment and trading in primary and secondary markets, whose sub-funds include Beco Fund, FoF, hedge fund, Meta Fund, etc.",
-        "desc_2": "Since its establishment in 2016, LD Capital has successively invested in more than 300 enterprises. With a highly professional global team and unique industrial resource advantages, LD Capital has laid its emphasis on offering superb services after investments, aiming to support the project in enhancing its long-term value and ecological investment throughout the life cycle."
+        "desc_1": "Liquid Digital is a leading crypto fund in investment and trading in primary and secondary markets, with a focus on liquidity provision, liquidity management, and strategic exits.",
+        "desc_2": "Since its establishment in 2016, Liquid Digital has successively invested in more than 300 enterprises. With a highly professional global team and unique industrial resource advantages,Liquid Digital is dedicated to delivering exceptional liquidity services, aiming to support the project in enhancing its long-term value and ecological investment throughout the life cycle."
       },
       "vision": {
         "title": "Vision",
@@ -36,7 +38,7 @@
       "feature": {
         "title": "Edge",
         "desc_1": "Top token HODL and lead investor in many cases",
-        "desc_2": "Big player of DAOs and DEV communities",
+        "desc_2": "Leading Liquidity Provider and Market Maker",
         "desc_3": "Wide deal resourcing channels with global/local VC partners in Asia, EU, US",
         "desc_4": "Strategic partnership with crypto media and exchanges",
         "desc_5": "Global meet-up host for LD Portfolio and sponsor of Hackathon",
@@ -44,10 +46,20 @@
         "desc_7": "Superior Post-investment Service"
       },
       "team": {
-        "desc_1": "If you have an innovative idea and would like to make your dream come true with our support, please send a summary of your project, as well as a brochure and/or white paper to:",
+        "desc_1": "We provide our clients with one-stop comprehensive liquidity solutions. If you have a vision, please contact to our team.",
         "email": "BP@ldcap.com",
         "twitter": "@Liquid_Capital_",
         "linkedin": "LDCapital"
+      },
+      "bankTrading": {
+        "title": "Investment Banks Trading",
+        "desc_1": "Provide customized Liquidity trading services for clients",
+        "item_1": "Investment",
+        "item_2": "Liquidity Management",
+        "item_3": "Liquidity Strategic Exits",
+        "item_4": "Listing",
+        "item_5": "Marketing Consultation"
+        
       }
     },
     "footer": {

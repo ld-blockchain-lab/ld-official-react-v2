@@ -81,43 +81,51 @@ export const Reports: React.FC = () => {
   return (
     <HomeContentBlock activeTag={HomeActiveMenu.reports}>
       <div id="reports" className="single-page">
-        <HomeContentTitle.T1>{t('sider.menu.reports')}</HomeContentTitle.T1>
-        {selfData.map((report) => (
-          <div key={report.id} className="report self">
-            <HomeContentTitle.T2 className="title-t3" key={report.id}>
-              <Link to={`/report/${report.id}`} className="report-link">
-                <span>{report.title}</span>
-                {report.subTitle && <small>{report.subTitle}</small>}
-              </Link>
-            </HomeContentTitle.T2>
-            <StyledTime>{report.displayDatetime}</StyledTime>
-            <StyledP>{report.description}</StyledP>
-          </div>
-        ))}
-        <HomeContentTitle.T1>{t('reports.article')}</HomeContentTitle.T1>
-        {data.map((report) => (
-          <div key={report.id} className="report">
-            <HomeContentTitle.T3 className="title-t3" key={report.id}>
-              <a href={report.url} target="_blank" className="report-link">
-                {report.title}
-              </a>
-            </HomeContentTitle.T3>
-            <StyledP>{formatDescription(report.description)}</StyledP>
-            {report.i18n.length > 1 && (
-              <StyledOtherVer>
-                <span>Other version:</span>
-                {report.i18n
-                  .filter((r) => r.lang !== report.lang)
-                  .map((r) => (
-                    <a href={r.url} target="_blank">
-                      [{langMap[r.lang]}]
-                    </a>
-                  ))}
-              </StyledOtherVer>
-            )}
-            <StyledTime>{formatTime(report.displayDatetime)}</StyledTime>
-          </div>
-        ))}
+        {selfData.length > 0 && (
+          <>
+            <HomeContentTitle.T1>{t('sider.menu.reports')}</HomeContentTitle.T1>
+            {selfData.map((report) => (
+              <div key={report.id} className="report self">
+                <HomeContentTitle.T2 className="title-t3" key={report.id}>
+                  <Link to={`/report/${report.id}`} className="report-link">
+                    <span>{report.title}</span>
+                    {report.subTitle && <small>{report.subTitle}</small>}
+                  </Link>
+                </HomeContentTitle.T2>
+                <StyledTime>{report.displayDatetime}</StyledTime>
+                <StyledP>{report.description}</StyledP>
+              </div>
+            ))}
+          </>
+        )}
+        {data.length > 0 && (
+          <>
+            <HomeContentTitle.T1>{t('reports.article')}</HomeContentTitle.T1>
+            {data.map((report) => (
+              <div key={report.id} className="report">
+                <HomeContentTitle.T3 className="title-t3" key={report.id}>
+                  <a href={report.url} target="_blank" className="report-link">
+                    {report.title}
+                  </a>
+                </HomeContentTitle.T3>
+                <StyledP>{formatDescription(report.description)}</StyledP>
+                {report.i18n.length > 1 && (
+                  <StyledOtherVer>
+                    <span>Other version:</span>
+                    {report.i18n
+                      .filter((r) => r.lang !== report.lang)
+                      .map((r) => (
+                        <a href={r.url} target="_blank">
+                          [{langMap[r.lang]}]
+                        </a>
+                      ))}
+                  </StyledOtherVer>
+                )}
+                <StyledTime>{formatTime(report.displayDatetime)}</StyledTime>
+              </div>
+            ))}
+          </>
+        )}
       </div>
     </HomeContentBlock>
   )
