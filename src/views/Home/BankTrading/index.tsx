@@ -76,7 +76,7 @@ const Datas = styled.div`
     margin-bottom: 10px;
 
     span {
-      font-size: 36px;
+      font-size: 52px;
     }
   }
 
